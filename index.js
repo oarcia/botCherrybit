@@ -19,8 +19,11 @@ client.on('message',async message =>{
         message.reply('pong')
     }
 
-    if (message.content === 'hello'){
-        message.channel.send(`hello sabrotso ${message.author}`)
+    if (message.content === 'Hola'){
+        message.channel.send(`Hola ${message.author} como estas el dia de hoy ?`)
+    }
+    if (message.content.includes ('gracias')){
+        message.channel.send(`Dime  ${message.author} que puedo hacer por ti `)
     }
     if (message.content.includes('!test')){
         message.channel.send('happy for you human');
@@ -46,5 +49,12 @@ client.on('message',async message =>{
         const fetched = await message.channel.fetchMessages({limit: 100});
         message.channel.bulkDelete(fetched);
         console.log('message deleted')
+    }
+    if (message.content.includes('Web')){
+        message.channel.send('https://www.facebook.com/cherrybitweb')
+        const paqWeb = new RichEmbed()
+        .setTitle('Paquetes')
+        .setDescription('Por favor Puedes obtener mas informacion entrando a')
+        message.channel.send(paqWeb)
     }
 })
