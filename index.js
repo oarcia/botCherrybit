@@ -1,7 +1,7 @@
 const {Client, RichEmbed}= require('discord.js');//requerimos a discord
 const client = new Client();//requerimos Discord client que esl bot
 //EL TOKEN ES EL QUE TE DA en la pagina
-client.login('NTgwNjA3NjkzMjgzMTMxMzkz.XOTNBA.g-VX7ZlOuKdg5c8pL8-Uu4Z9zzw');
+client.login('');
 client.on('ready',() =>{//aqui escuchas lo que te esta diciendo y mandas mensaje que todo bien
     console.log(`Bot is ready as .. ${client.user.tag}`);
     client.user.setStatus('dnd');//aqui tu manejas el stado del bot online dnd ofline
